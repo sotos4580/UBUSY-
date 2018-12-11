@@ -10,12 +10,12 @@ current_min_time = lambda: int(round(time.time()) / 60)
 def get_active_hosts():
     import firebasenet
     # ----- Bypass Sudo -----
-    sudo_password = 'skyrim'
+    sudo_password = 'placeholder' #Password placeholder for sudo command
     command = '-'
     command = command.split()
 
     cmd1 = subprocess.Popen(['echo',sudo_password], stdout=subprocess.PIPE)
-    cmd2 = subprocess.Popen(['sudo','echo'] + command, stdin=cmd1.stdout, stdout=subprocess.PIPE)
+    cmd2 = subprocess.Popen(['sudo','-S'] + command, stdin=cmd1.stdout, stdout=subprocess.PIPE)
     # ----- End-Bypass Sudo -----
 
     with Popen(['sudo', 'arp-scan', '-l', '-r', '5'], stdout = PIPE) as proc:

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">firebasePyBase</string>
+    <string name="grainger_busyness">Grainger Busyness</string>
+    <string name="average_time_spent">Average Time Spent:</string>
+    <string name="minutes">50 Minutes</string>
+    <string name="button">Refresh</string>
+</resources>
